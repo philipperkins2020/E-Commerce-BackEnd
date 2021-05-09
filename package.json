@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/philipperkins2020/E-Commerce-BackEnd#readme",
   "dependencies": {
+    "dotenv": "^9.0.0",
     "env": "0.0.2",
     "express": "^4.17.1",
+    "mysql2": "^2.2.5",
     "sequelize": "^6.6.2"
   },
   "devDependencies": {},
