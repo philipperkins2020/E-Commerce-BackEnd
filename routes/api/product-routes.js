@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Category, Product } = require("../../models");
+const { Category, Product, ProductTag } = require("../../models");
 // The `/api/categories` endpoint
 // GET all products
 router.get("/", async (req, res) => {
@@ -40,11 +40,12 @@ router.post("/", async (req, res) => {
           tag_id,
         };
       });
-      return ProductTag.bulkCreate(productTagIdArr);
+       ProductTag.bulkCreate(productTagIdArr);
    
     }
-    res.status(200).json(product);
+    res.status(200).json(productData);
   } catch (err) {
+   console.log(err)
     res.status(400).json(err);
   }
 });
